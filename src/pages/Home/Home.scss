@@ -1,0 +1,25 @@
+.divide{
+  height: 105%;
+  width: 1px;
+  position: absolute;
+  left: 25%;
+  //left: 13.5rem;
+  top: -50px;
+  background: #cbcd8b;
+}
+.addTask{
+  position: absolute;
+  top: 90%;
+  right: 5%;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  background: $TextBgColor;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  span{
+    line-height: 30px;
+    font-size: 20px;
+  }
+}

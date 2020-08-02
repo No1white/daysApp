@@ -1,0 +1,95 @@
+.sideBarContainer{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+
+  .nav-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  .userInfo{
+    width: 100%;
+    height: auto;
+    background: #f4ede3;
+    text-align: center;
+    img{
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+    .userName{
+      margin: 5px;
+    }
+    .phrase{
+      padding: 10px;
+      margin: 0;
+    }
+  }
+  .side-nav{
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    background: #fcf8f5;
+    z-index: 2;
+    .side-nav-ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        width: 100%;
+        height:auto;
+
+        .wrap{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          border-bottom: 1px solid $bgColor;
+
+          span:nth-child(1) {
+            flex: 1;
+          }
+          p{
+            text-align: left;
+            flex: 3;
+          }
+          .icon-icon-test9{
+            flex: 1;
+            font-size: 20px;
+          }
+        }
+      }
+      .sub{
+        width: 100%;
+        list-style: none;
+        height: auto;
+        padding: 0px;
+        li{
+          height: 2rem;
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid $bgColor;
+          span{
+            font-size: 1rem;
+            margin-right: 6px;
+          }
+
+
+        }
+      }
+      .subHide{
+        display: none;
+      }
+      .subShow{
+        display: block;
+      }
+    }
+  }
+}

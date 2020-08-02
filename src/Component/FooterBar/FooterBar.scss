@@ -1,0 +1,32 @@
+.footerBarContainer{
+  width: 100%;
+  height: 2rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  z-index: 10;
+
+  .btnWrap{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    button{
+
+        width: 22%;
+        margin: 0px 8px;
+        border: none;
+        color: white;
+
+        border-radius: 30px;
+        background: #c6c5c0;
+    }
+
+    .active{
+      color: white;
+
+      background: $TextBgColor;
+    }
+  }
+}

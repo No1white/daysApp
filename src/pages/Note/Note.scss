@@ -1,0 +1,17 @@
+
+.addNote{
+  position: absolute;
+  top: 90%;
+  right: 5%;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  background: $TextBgColor;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  span{
+    line-height: 30px;
+    font-size: 20px;
+  }
+}

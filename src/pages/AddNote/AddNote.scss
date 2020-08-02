@@ -1,0 +1,17 @@
+.addNoteContainer{
+  height: 100%;
+
+  .noteTitle{
+    border-bottom: 1px solid $bgColor;
+  }
+  .noteContent{
+    height: 100%;
+  }
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: white;
+}

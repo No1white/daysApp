@@ -1,0 +1,78 @@
+.taskContainer{
+  width: 100%;
+  height: auto;
+  position: relative;
+  .divide{
+    height: 120%;
+    position: relative;
+  }
+  .taskList{
+    width: 100%;
+    height: auto;
+
+    .taskItem{
+      width: 100%;
+      height: 4rem;
+      padding: 10px 20px ;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      p{
+        margin: 0;
+        padding: 0;
+
+      }
+      .time{
+        flex: 1;
+        p{
+          line-height: 50px;
+        }
+      }
+      .taskIcon{
+        position: absolute;
+        left: 25%;
+        transform: translateX(-50%);
+        //left: 12rem;
+        width: 3rem;
+        height: 3rem;
+
+
+        border-radius: 50%;
+        background: $TextBgColor;
+        span{
+          color: white;
+          font-size: 2rem;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .taskInfo{
+        flex: 4;
+        margin-left: 4rem;
+        .taskTitleWrap{
+          margin: 5px 0px;
+          .taskTitle{
+            padding: 5px 0px;
+            display: inline-block;
+            border-bottom: 1px solid #cace87;
+          }
+        }
+      }
+    }
+  }
+  .btnGroup{
+    position: fixed;
+    width: 10rem;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    .btnWrap{
+      width: 100%;
+      .btn{
+
+      }
+    }
+  }
+}

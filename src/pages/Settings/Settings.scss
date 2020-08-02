@@ -1,0 +1,60 @@
+.settingContainer{
+  width: 100%;
+  height: 100%;
+  .acountWrap{
+
+    width: 100%;
+    height: 100%;
+    .login{
+      position: absolute;
+      width: 20rem;
+      height: 13rem;
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      transform: translate(-50%,-50%);
+      background: white;
+      z-index: 20;
+      h4{
+        font-weight: normal;
+        text-align: center;
+      }
+
+    }
+    .register{
+      position: absolute;
+      width: 20rem;
+      height: 13rem;
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      transform: translate(-50%,-50%);
+      background: white;
+      z-index: 20;
+      h4{
+        font-weight: normal;
+        text-align: center;
+      }
+
+    }
+    .mark{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: rgba(0,0,0,.4);
+    }
+
+
+  }
+
+
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
