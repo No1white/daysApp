@@ -29,7 +29,7 @@ class SideBar extends Component {
             <div className={'sideBarContainer'}>
 
                 <div id="sideNav" className="side-nav">
-                    <div className={'userInfo'}>
+                    <div className={'userInfo'} onClick={()=>this.goTo('/mine')}>
                         <img  className={'avatar'} src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=231923533,1272780950&fm=11&gp=0.jpg" alt=""/>
                         <h4 className={'userName'}>忘言</h4>
                         <p className={'phrase'}>每日进步一点这不就是希望</p>

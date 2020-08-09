@@ -1,5 +1,7 @@
 import React from 'react'
 import  {BrowserRouter,Route,Switch} from 'react-router-dom'
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 
 import Home from "./pages/Home/Home";
 import AddTask from "./pages/AddTask/AddTask";
@@ -11,10 +13,15 @@ import Register from "./pages/Register/Register";
 import AddNote from "./pages/AddNote/AddNote";
 import Schedule from "./pages/Schedule/Schedule";
 import Settings from "./pages/Settings/Settings";
-
-export default  class App extends React.Component {
+import Mine from "./pages/Mine/Mine";
+class App extends React.Component {
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+    };
     constructor(props) {
         super(props);
+        const { cookies } = props;
+        console.log(cookies)
         this.state = {
             sideBarSwitch:false,
             showNavBar:true
@@ -31,7 +38,7 @@ export default  class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{width:'100%'}}>
 
 
                 <BrowserRouter >
@@ -46,9 +53,8 @@ export default  class App extends React.Component {
                         </Route>
                         <Route path={'/login'} component={Login}></Route>
                         <Route path={'/register'} component={Register}></Route>
-                        <Route path={'/settings'} component={Settings}>
-
-                        </Route>
+                        <Route path={'/settings'} component={Settings}></Route>
+                        <Route path={'/mine'} component={Mine}></Route>
                         <Route path={'/'} component={Home}></Route>
 
                     </Switch>
@@ -61,3 +67,4 @@ export default  class App extends React.Component {
 }
 
 
+export default withCookies(App);

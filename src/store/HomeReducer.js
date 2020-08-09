@@ -153,16 +153,26 @@ function compareTime(date1,date2){
 //插入任务处理
 function insertTask(state,taskInfo) {
     let insertIndex = -1;
-    taskInfo.taskId = state.taskList[state.taskList.length-1].taskId+1
-    state.taskList.forEach((task, index)=> {
 
-        if(compareTime(task.taskTime,taskInfo.taskTime)){
-            insertIndex = index;
+    console.log(state.taskList.length)
+    if(state.taskList.length<=0) {
+        taskInfo.taskId = 0;
+    }else {
+        taskInfo.taskId = state.taskList[state.taskList.length-1].taskId+1
+    }
 
-        }
-    })
 
-    state.taskList.splice(insertIndex+1,0,taskInfo)
+        state.taskList.forEach((task, index)=> {
+
+            if(compareTime(task.taskTime,taskInfo.taskTime)){
+                insertIndex = index;
+
+            }
+        })
+        //如果是每天或者星期则改变finished为true
+        state.taskList.splice(insertIndex+1,0,taskInfo)
+
+
     return state;
 }
 function finishTask(state,taskId) {
@@ -207,17 +217,33 @@ function finishTask(state,taskId) {
 }
 function unfinishedTask(state,taskId) {
     let taskIndex = -1;
+    console.log("未完成")
     state.historyTasks.forEach((task,index) => {
         if(task.taskId ==taskId) {
             taskIndex = index;
         }
     })
+    //这里如果是仅一次就插入 如果不是则改变finished
     let taskInfo = state.historyTasks[taskIndex];
-    taskInfo.finished = false;
-    delete taskInfo.finishedTime;
-    state = insertTask(state,taskInfo);
+    if(taskInfo.repeatTimes.indexOf(7)!==-1) {
+        console.log("仅一次")
+        taskInfo.finished = false;
+        delete taskInfo.finishedTime;
+        state = insertTask(state,taskInfo);
 
-    state.historyTasks.splice(taskIndex,1);
+        state.historyTasks.splice(taskIndex,1);
+    }else {
+        state.historyTasks.splice(taskIndex,1);
+        state.taskList.forEach((task,index)=> {
+            if(task.taskId === taskInfo.taskId) {
+                taskIndex=index;
+            }
+        })
+
+        state.taskList[taskIndex].finished=false;
+    }
+    console.log(taskInfo)
+
 
     return state;
 }

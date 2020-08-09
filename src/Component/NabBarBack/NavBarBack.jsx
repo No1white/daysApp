@@ -51,7 +51,7 @@ class NavBarBack extends Component {
                             <span className={'iconfont icon-Back'}></span>Back
                         </div>
                     </Link>
-                    <div className={'nav'}>设置</div>
+                    <div className={'nav'}>{this.props.navBarTitle}</div>
                     <div className="right" >
 
                     </div>

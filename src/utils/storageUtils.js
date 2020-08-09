@@ -9,6 +9,29 @@ export const saveState = (state) => {
         // ...错误处理
     }
 }
+export const saveStorage = (data,name) => {
+    try {
+        const serializedState = JSON.stringify(data);
+        localStorage.setItem(name, serializedState);
+    } catch (err) {
+        // ...错误处理
+    }
+}
+
+export  const getStorage = (name) => {
+    try { // 也可以容错一下不支持localStorage的情况下，用其他本地存储
+        const serializedStorage = localStorage.getItem(name);
+        if (serializedStorage === null ) {
+            return null;
+        } else {
+            let storage = JSON.parse(serializedStorage);
+            return storage;
+        }
+    } catch (err) {
+        // ... 错误处理
+        return undefined;
+    }
+}
 export const loadState = () => {
     try { // 也可以容错一下不支持localStorage的情况下，用其他本地存储
         const serializedState = localStorage.getItem('state');

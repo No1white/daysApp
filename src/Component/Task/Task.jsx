@@ -1,30 +1,50 @@
 import React,{Component} from 'react'
 
+
 import {SegmentedControl, WingBlank,  Modal} from 'antd-mobile'
 import {withRouter} from 'react-router-dom'
 import history from "../../utils/history";
+
 import {finishTask,unfinished,delTask} from '../../store/action'
 import './Task.scss'
 import store from '../../store/index'
 
+const switchMusic = require('../../assets/audio/taskMusic.mp3')
 const operation = Modal.operation;//确认框
 class Task extends Component {
     constructor(props) {
         super(props);
         let taskList = this.filterTaskList(store.getState().HomeReducer.taskList);
+        // let taskList = store.getState().HomeReducer.taskList;
         this.state = {
             taskList,
             showList:true,
-            selectedIndex:0
+            selectedIndex:0,
+            playMuic:false
         }
-        store.subscribe(this.handleStateChange)
+         store.subscribe(this.handleStateChange)
 
 
     }
+    componentWillUnmount() {
+        this.setState = ()=>false;
+    }
+
     handleStateChange = () => {
-        this.setState({
-            taskList:this.filterTaskList(store.getState().HomeReducer.taskList)
-        })
+        // this.setState({
+        //     taskList:this.filterTaskList(store.getState().HomeReducer.taskList)
+        // })
+        if(this.state.selectedIndex == 0) {
+            this.setState({
+                showList:true,
+            })
+            this.taskListChange();
+        }else {
+            this.setState({
+                showList:false,
+            })
+            this.showHistoryList(store.getState().HomeReducer.historyTasks);
+        }
     }
 
     //显示历史
@@ -46,7 +66,7 @@ class Task extends Component {
     //筛选今天需要完成的任务
     filterTaskList = (taskList) => {
         let date = new Date();
-        console.log(taskList)
+
         taskList =taskList.filter(item=>{
             let flag = false;
             if(item.finished === false) {
@@ -74,7 +94,11 @@ class Task extends Component {
     }
     //处理任务完成函数
     handleFinished = (taskId,e) => {
-
+        this.refs.music.play()
+        console.log(this.state.selectedIndex)
+        this.setState({
+            playMuic:true
+        })
         if(this.state.showList) {
             store.dispatch(finishTask(taskId))
         }else {
@@ -159,7 +183,9 @@ class Task extends Component {
     render() {
         return (
             <div className={'taskContainer'}>
-                <div className={'divide'}></div> {/*分割线*/}
+                <div className={'divide'} ></div> {/*分割线*/}
+                <audio src={switchMusic} ref={'music'}></audio>
+
                 {/*循环显示任务*/}
                 <div className="taskList">
                     {

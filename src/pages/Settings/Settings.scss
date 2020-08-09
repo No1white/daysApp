@@ -31,9 +31,51 @@
       transform: translate(-50%,-50%);
       background: white;
       z-index: 20;
+      .input-item{
+        margin: 6px 0px;
+      }
       h4{
         font-weight: normal;
         text-align: center;
+
+      }
+      .codeWrap{
+        display: flex;
+        .codeInput{
+          flex: 5;
+        }
+        .getCode{
+          flex: 4;
+        }
+      }
+
+    }
+    .changePassword{
+      position: absolute;
+      width: 20rem;
+      height: 13rem;
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      transform: translate(-50%,-50%);
+      background: white;
+      z-index: 20;
+      .input-item{
+        margin: 6px 0px;
+      }
+      h4{
+        font-weight: normal;
+        text-align: center;
+
+      }
+      .codeWrap{
+        display: flex;
+        .codeInput{
+          flex: 5;
+        }
+        .getCode{
+          flex: 4;
+        }
       }
 
     }

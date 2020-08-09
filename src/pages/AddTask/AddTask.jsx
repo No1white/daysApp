@@ -20,7 +20,6 @@ export  default class AddTask extends Component {
         let pathName = this.props.location.pathname.replace('/','');
         if(taskId) {
             store.dispatch(editTask(taskId))
-            console.log(store.getState().HomeReducer.editTask)
             let editTaskInfo = store.getState().HomeReducer.editTask;
             let taskTimes = editTaskInfo.taskTime.split(':');
             let repeatTimes;
@@ -40,13 +39,11 @@ export  default class AddTask extends Component {
                 pathName,
                 taskTitle:editTaskInfo.taskTitle,
                 taskContent:editTaskInfo.taskContent,
-                repeatTimes,
                 oneChecked:true,
                 allChecked:false,
                 days:editTaskInfo.repeatTimes,
                 daysChecked:false,
                 checkedList:[false,false,false,false,false,false,false],
-                repeatTime:repeatTimes,
                 editFlag:true,
                 finished:editTaskInfo.finished
             }
@@ -77,7 +74,8 @@ export  default class AddTask extends Component {
     }
     //处理选择重复次数
     onChange = (value) => {
-        if(value ==8) {  //判断是否选择仅一次
+        console.log(value)
+        if(value ==7) {  //判断是否选择仅一次
             let checkedList =[false,false,false,false,false,false,false]
             this.setState({
                 oneChecked:!this.state.oneChecked,
@@ -88,7 +86,7 @@ export  default class AddTask extends Component {
             })
             this.switchRepeat()
 
-        }else if(value==9) { //判断是否选择每天
+        }else if(value==8) { //判断是否选择每天
             let checkedList =[false,false,false,false,false,false,false]
             this.setState({
                 oneChecked:false,
@@ -130,6 +128,7 @@ export  default class AddTask extends Component {
             value
         })
     }
+
     //绑定title输入框的change事件
     handleTaskTitleChange = (event) => {
         this.setState({
@@ -165,10 +164,10 @@ export  default class AddTask extends Component {
     handleSaveTask = () => {
         let repeatTimes =[];
         if(this.state.allChecked) {
-            repeatTimes.push(7)
+            repeatTimes.push(8)
         }
         if(this.state.oneChecked) {
-            repeatTimes.push(8);
+            repeatTimes.push(7);
         }else {
             repeatTimes=this.state.days
         }
@@ -177,7 +176,7 @@ export  default class AddTask extends Component {
             taskTime:this.state.value[0]+':'+this.state.value[1],
             taskTitle:this.state.taskTitle,
             taskContent:this.state.taskContent,
-            repeatTimes,
+            repeatTimes:repeatTimes,
             finished:this.state.finished
         }
         //判断是否是修改
@@ -185,6 +184,7 @@ export  default class AddTask extends Component {
             store.dispatch(changeTask(taskInfo))
         }else {//执行添加任务
             store.dispatch(addTask(taskInfo))
+
         }
         this.props.history.push('/')
     }
@@ -220,10 +220,6 @@ export  default class AddTask extends Component {
                     <h4 className={'repeatTime'} onClick={this.switchRepeat}>{this.state.repeatTime}<span className={'iconfont icon-jiantou1'}></span></h4>
                 </div>
 
-                {/*<div className={'repeatMask'}>*/}
-                {/*    <div className={'timeList'}></div>*/}
-                {/*    <div className={'mask'}></div>*/}
-                {/*</div>*/}
                 <div className={`selfCheckContianer ${this.state.switchRepeat?'showEle':'hideEle'}`}>
                     <div className={'list'}>
                         <List >

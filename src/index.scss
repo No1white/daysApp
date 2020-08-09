@@ -12,11 +12,39 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon {
+  width: 2em; height: 2em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+}
 .appContainer{
   width: 100%;
   height: 100%;
   position: relative;
   background: #f4ede3;
+}
+.btn-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  transform: translate(0px,200px);
+}
+.btn-enter-active {
+  opacity: 1;
+  transform: translate(0px,0px);
+  transition: all 1000ms, transform 500ms;
+}
+.btn-exit {
+  opacity: 1;
+  transform: translate(0px,0px);
+}
+.btn-exit-active {
+  opacity: 0;
+  transform: translate(0px,200px);
+  transition: all 1000ms, transform 1000ms;
 }
 
 
