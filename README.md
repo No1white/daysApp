@@ -2,27 +2,22 @@
 
 days是一个学习打卡App
 
-days运行效果：
+days部分运行效果：
 
-![image-20200815085210986](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085210986.png)
+![Snipaste_2020-08-15_08-52-32.jpg](https://i.loli.net/2020/08/15/bzjVo6MDHIhuPat.jpg)
 
+![Snipaste_2020-08-15_09-34-12.jpg](https://i.loli.net/2020/08/15/X1xb4VPr2Yv7uRo.jpg)
+![Snipaste_2020-08-15_09-34-30.jpg](https://i.loli.net/2020/08/15/Z65QSfvBNDOLcIF.jpg)
 
-
-![image-20200815085352908](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085352908.png)
-
-![image-20200815085401663](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085401663.png)
-
+![Snipaste_2020-08-15_09-34-45.jpg](https://i.loli.net/2020/08/15/73rKiJPGZBc5DIg.jpg)
 
 
-
+![Snipaste_2020-08-15_09-34-21.jpg](https://i.loli.net/2020/08/15/z4Fg5BDxPasqZ8V.jpg)
 
 
 
 
 
-
-
-![image-20200815085426979](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085426979.png)
 
 ## 技术栈
 
