@@ -4,6 +4,7 @@ days是一个学习打卡App
 
 days部分运行效果：
 
+![1,jpg](https://i.loli.net/2020/08/15/j5JOhWNsbE4Zc9x.jpg)
 ![1](https://i.loli.net/2020/08/15/bzjVo6MDHIhuPat.jpg)
 ![Snipaste_2020-08-15_08-52-32.jpg](https://i.loli.net/2020/08/15/XuinUDdEwRcr5eS.jpg)
 ![Snipaste_2020-08-15_08-52-32.jpg](https://i.loli.net/2020/08/15/XuinUDdEwRcr5eS.jpg)
