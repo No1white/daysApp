@@ -70,6 +70,4 @@ npm run build
 
 4.react组件化处理的比较好，只需要引入即可使用，而vue需要引入注册
 
-vue和react都是很好的框架，都有各自的优点，对于学习前端这两个框架都是必学
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
+vue和react都是很好的框架，都有各自的优点，对于学习前端这两个框架都是必学的！
