@@ -1,68 +1,81 @@
-This project was bootstrapped with [Create React Calendar](https://github.com/facebook/create-react-app).
+# 基于React开发的webApp
 
-## Available Scripts
+days是一个学习打卡App
 
-In the project directory, you can run:
+days运行效果：
 
-### `npm start`
+![image-20200815085210986](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085210986.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+![image-20200815085352908](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085352908.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image-20200815085401663](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085401663.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Schedule: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React Calendar documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image-20200815085426979](C:\Users\lin\AppData\Roaming\Typora\typora-user-images\image-20200815085426979.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 技术栈
 
-### Code Splitting
+1.React
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+2.react-redux
 
-### Analyzing the Bundle Size
+3.react-router
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+4.redux-thunk
 
-### Making a Progressive Web Calendar
+5.axios
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+6.antd-mobile
 
-### Advanced Configuration
+7rc-animate 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## 项目部署
 
-### Deployment
+### 1.安装依赖
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
+npm install 
+```
 
-### `npm run build` fails to minify
+### 2.启动
 
+```
+npm start
+or
+npm run dev
+```
+
+### 3.打包
+
+```
+npm run build
+```
+
+
+
+## 项目总结
+
+在项目前做好文档很重要，如果前期准备的完善，可以极大提高开发效率，本来这个项目打算用vue来做，我刚好太久没使用react拿来练练手，中间的遇到很多坑，整个项目做下来，学习到很多东西，这些是看教程或者看教学视频无法学到东西。
+
+1.个人感觉对于react相比vue，vue更加容易上手
+
+2.react相对比较纯洁，怎么说呢，因为react把很多脏活累活都打包到其他库上
+
+3.react比较适合做大型项目，维护相对简单一点
+
+4.react组件化处理的比较好，只需要引入即可使用，而vue需要引入注册
+
+vue和react都是很好的框架，都有各自的优点，对于学习前端这两个框架都是必学
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
