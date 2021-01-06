@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "antd-mobile": "^2.3.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "history": "^5.0.0",
     "http-proxy-middleware": "^1.0.5",
     "prop-types": "^15.7.2",
